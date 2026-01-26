@@ -7,9 +7,17 @@
         <style>
             body{
                 font-family: Times New Roman,sans-serif;
-                margin:20px;
-                background-color: #2e2b2b;
+                margin: 20px;
                 color:aliceblue;
+                background: linear-gradient(-45deg, #2e2b2b, #3a3434, #1f1c1c, #4c4a4a);
+                background-size: 400% 400%;
+                animation: gradientBG 15s ease infinite;
+
+                @keyframes gradientBG {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
                 h1{
                     text-align: center;
                 }
@@ -35,6 +43,11 @@
                 display: inline-block;
                 vertical-align: top;
                 display:grid;
+            }
+
+            .team-container div:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
             }
         </style>
     </head>
