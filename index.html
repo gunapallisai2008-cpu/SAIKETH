@@ -13,11 +13,7 @@
                 background-size: 400% 400%;
                 animation: gradientBG 15s ease infinite;
 
-                @keyframes gradientBG {
-                    0% { background-position: 0% 50%; }
-                    50% { background-position: 100% 50%; }
-                    100% { background-position: 0% 50%; }
-                }
+                
                 h1{
                     text-align: center;
                 }
@@ -45,10 +41,19 @@
                 display:grid;
             }
 
+            
+
+            @keyframes gradientBG {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+
             .team-container div:hover {
                 transform: translateY(-10px) scale(1.05);
                 box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
             }
+            
         </style>
     </head>
     
