@@ -57,11 +57,35 @@
                 transform: translateY(-10px) scale(1.05);
                 box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
             }
-            
+            .particle {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                animation: float 10s linear infinite;
+            }
+            .particle:nth-child(1) { left: 10%; animation-duration: 12s; top: 90%; }
+            .particle:nth-child(2) { left: 50%; animation-duration: 8s; top: 80%; }
+            .particle:nth-child(3) { left: 80%; animation-duration: 15s; top: 70%; }
+            .particle:nth-child(4) { left: 30%; animation-duration: 10s; top: 60%; }
+            .particle:nth-child(5) { left: 70%; animation-duration: 18s; top: 50%; }
+
+            @keyframes float {
+                0% { transform: translateY(0) translateX(0); }
+                50% { transform: translateY(-500px) translateX(50px); }
+                100% { transform: translateY(0) translateX(0); }
+            }
         </style>
     </head>
     
     <body>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
         <h1>About us</h1>
         <h3><u>Our goal</u></h3>
         <p>Our mission is to empower students with real-time information about 
