@@ -1,2 +1,0 @@
-# SAIKETH
-School safety system
