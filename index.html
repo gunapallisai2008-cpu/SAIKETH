@@ -5,26 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome Page</title>
     </head>
-    <style>
-        body{
-                font-family: Times New Roman,sans-serif;
-                margin: 20px;
-                color:aliceblue;
-                background: linear-gradient(-45deg, #2e2b2b, #3a3434, #1f1c1c, #4c4a4a);
-                background-size: 400% 400%;
-            }
-            h1{
-                text-align: center;
-                font-size: 50px;
-                margin-top: 200px;
-            }
-            h2{
-                margin-left:200px;
-                margin-top: 120px;
-            }
-            
-            
-    </style>
+        <style>
+            body{
+                    font-family: "Times New Roman" , serif;
+                    margin: 20px;
+                    color:aliceblue;
+                    background: linear-gradient(-45deg, #2e2b2b, #3a3434, #1f1c1c, #4c4a4a);
+                    background-size: 400% 400%;
+                    animation: gradientBG 15s ease infinite;
+                }
+                h1{
+                    text-align: center;
+                    font-size: 50px;
+                    margin-top: 200px;
+                }
+                h2{
+                    margin-left:200px;
+                    margin-top: 120px;
+                }
+
+                @keyframes gradientBG {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+        </style>
     <body>
         <h1>NAME</h1>
         <h2>Tag line</h2>
