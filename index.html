@@ -5,6 +5,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About us page</title>
         <style>
+            .carousel-container{
+                width:100%;
+                overflow:hidden;
+                background-color:aqua;
+                padding:20px;
+                margin-top: 150px;
+            
+                        
+                }
+            .carousel-track{
+                display:flex;
+                width: max-content;
+                animation: scroll 10s linear infinite;
+            
+            }
+            .card{
+                flex:0 0 auto;
+                height: 300px;
+                width:200px;
+                background:#eb0c0c;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                color:aliceblue;
+                font-weight: bold;
+                border-radius:20px;
+                margin: 0 1;
+            
+            }
+            @keyframes scroll{
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(-50%);
+                }
+            }
             body{
                 font-family: Times New Roman,sans-serif;
                 margin: 20px;
@@ -101,6 +138,18 @@
     
     
         <h3><u>Our members</u></h3>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+            </div>
+        </div>
         <div class="team-container">
             <div>
                 <p>Member 1: Sai Gunapalli</p>
