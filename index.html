@@ -5,7 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About us page</title>
         <style>
-           
+           .carousel-container{
+                width:100%;
+                overflow:hidden;
+                background-color:rgb(163, 33, 120);
+                padding:10px;
+                margin-top: 100px;
+            
+                        
+                }
+            .carousel-track{
+                display:flex;
+                width: max-content;
+                will-change:transform;
+                animation: scroll 12s linear infinite;
+            
+            }
+            .card{
+                flex:0 0 auto;
+                height: 20px;
+                width:170px;
+                background:#f3730b;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                color:rgb(255, 255, 255);
+                font-weight: bold;
+                border:20px;
+                
+            
+            }
+            @keyframes scroll{
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(calc(-1*(100%/2)));
+                }
+            }
             
             body{
                 font-family: Times New Roman,sans-serif;
@@ -99,10 +136,24 @@
         <p>We are a team of four dedicated individuals collaborating to build, manage, 
             and enhance this platform.
         </p>
-    
-    
-    
         <h3><u>Our members</u></h3>
+        
+        <!--team members+infinite scrol  -->
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+
+            </div>
+        </div>
+
         <div class="team-container">
             <div>
                 <p>Member 1: Sai Gunapalli</p>
