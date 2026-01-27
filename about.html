@@ -1,1 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About us page</title>
+        <style>
+                width:100%;
+                overflow:hidden;
+                background: linear-gradient(135deg, #3B0050, #6A0DAD);
+                padding:10px;
+                margin-top: 50px;
+            
+                        
+                }
+            
+            .carousel-item{
+                transition:scale(2);
+                box-shadow:0 0 5px rgba(255, 140, 0, 1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }    
+            .carousel-track{
+                display:flex;
+                width: max-content;
+                will-change:transform;
+                animation: scroll 12s linear infinite;
+            
+            }
+            .carousel-track:hover{
+                animation-play-state: paused;
+                box-shadow:0 0 20px rgb(213, 27, 230);    
+            }
+            
+            .card{
+                flex:0 0 auto;
+                height: 20px;
+                width:168px;
+                background: radial-gradient(circle, #CC5500, #ca7a17);
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                color:rgb(255, 255, 255);
+                font-weight: bold;
+                border:20px;
+                border-color:#ffffff;
+                border-width:20px;
+            }
+            @keyframes glow{
+                0% {
+                    box-shadow: 0 0 2px rgba(255, 140, 0, 0.5);
+                }
+                5% {
+                    box-shadow: 0 0 5px rgba(255, 140, 0, 1);
+                }
+                10% {
+                    box-shadow: 0 0 2px rgba(255, 140, 0, 0.5);
+                }
+            }
+    
+
+            @keyframes scroll{
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(calc(-1*(100%/2)));
+                }
+            }
+            
+            body{
+                font-family: Times New Roman,sans-serif;
+                margin: 20px;
+                color:aliceblue;
+                background: linear-gradient(-45deg, #2e2b2b, #3a3434, #1f1c1c, #4c4a4a);
+                background-size: 400% 400%;
+                animation: gradientBG 15s ease infinite;
+            }
+                
+                h1{
+                    text-align: center;
+                }
+                h3{
+                    text-align: center;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    text-align: center;
+                }
+            .team-container {
+                display: grid;        
+                gap: 20px;            
+                grid-template-columns: repeat(4,1fr);
+                grid-auto-rows:(auto);    
+                margin-top: 20px;
+                justify-items: center;  
+                justify-content: end; 
+                
+                
+                
+             }
+            .team-container div{
+                background-color: #4c4a4a;
+                border: 2px solid #ffffff;
+                border-radius: 10px;
+                padding: 15px;
+                width: 250px;
+                display: inline-block;
+                vertical-align: top;
+                display:grid;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            
+
+            @keyframes gradientBG {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+
+            .team-container div:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+            }
+            .particle {
+                position: fixed;
+
+                width: 10px;
+                height: 10px;
+                background-color: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                animation: fall;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            .particle:nth-child(1)  { left: 5%;  top: 10%;  width: 6px;  height: 6px;  animation-duration: 12s;  animation-delay: 0s; }
+            .particle:nth-child(2)  { left: 15%; top: 40%;  width: 8px;  height: 8px;  animation-duration: 15s; animation-delay: 2s; }
+            .particle:nth-child(3)  { left: 25%; top: 20%;  width: 5px;  height: 5px;  animation-duration: 14s; animation-delay: 4s; }
+            .particle:nth-child(4)  { left: 35%; top: 70%;  width: 7px;  height: 7px;  animation-duration: 16s; animation-delay: 1s; }
+            .particle:nth-child(5)  { left: 45%; top: 30%;  width: 6px;  height: 6px;  animation-duration: 11s; animation-delay: 3s; }
+            .particle:nth-child(6)  { left: 55%; top: 80%;  width: 8px;  height: 8px;  animation-duration: 13s; animation-delay: 5s; }
+            .particle:nth-child(7)  { left: 65%; top: 15%;  width: 5px;  height: 5px;  animation-duration: 15s; animation-delay: 2s; }
+            .particle:nth-child(8)  { left: 75%; top: 50%;  width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 4s; }
+            .particle:nth-child(9)  { left: 85%; top: 60%;  width: 7px;  height: 7px;  animation-duration: 14s; animation-delay: 1s; }
+            .particle:nth-child(10) { left: 95%; top: 25%;  width: 5px;  height: 5px;  animation-duration: 13s; animation-delay: 3s; }
+            .particle:nth-child(11) { left: 20%; top: 5%;   width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 2s; }
+            .particle:nth-child(12) { left: 40%; top: 90%;  width: 5px;  height: 5px;  animation-duration: 15s; animation-delay: 5s; }
+            .particle:nth-child(13) { left: 60%; top: 35%;  width: 7px;  height: 7px;  animation-duration: 16s; animation-delay: 1s; }
+            .particle:nth-child(14) { left: 80%; top: 75%;  width: 6px;  height: 6px;  animation-duration: 11s; animation-delay: 3s; }
+            .particle:nth-child(15) { left: 90%; top: 55%;  width: 8px;  height: 8px;  animation-duration: 14s; animation-delay: 2s; }
+            .particle:nth-child(11) { left: 20%; top: 80%;  width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 2s; }
+            .particle:nth-child(12) { left: 40%; top: 90%;  width: 5px;  height: 5px;  animation-duration: 15s; animation-delay: 2s; }
+            .particle:nth-child(13) { left: 60%; top: 35%;  width: 7px;  height: 7px;  animation-duration: 16s; animation-delay: 1s; }
+            .particle:nth-child(14) { left: 80%; top: 85%;  width: 6px;  height: 6px;  animation-duration: 11s; animation-delay: 3s; }
+            .particle:nth-child(15) { left: 90%; top: 95%;  width: 8px;  height: 8px;  animation-duration: 14s; animation-delay: 2s; }
+            .particle:nth-child(16) { left: 10%; top: 100%; width: 5px;  height: 5px;  animation-duration: 15s; animation-delay: 4s; }
+            .particle:nth-child(17) { left: 30%; top: 92%;  width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 1s; }
+            .particle:nth-child(18) { left: 50%; top: 80%;  width: 7px;  height: 7px;  animation-duration: 13s; animation-delay: 3s; }
+            .particle:nth-child(19) { left: 70%; top: 100%; width: 6px;  height: 6px;  animation-duration: 16s; animation-delay: 2s; }
+            .particle:nth-child(20) { left: 90%; top: 85%;  width: 5px;  height: 5px;  animation-duration: 14s; animation-delay: 0s; }
+            .particle:nth-child(21) { left: 12%; top: 50%;  width: 5px;  height: 5px;  animation-duration: 13s; animation-delay: 2s; }
+            .particle:nth-child(22) { left: 22%; top: 95%;  width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 0s; }
+            .particle:nth-child(23) { left: 32%; top: 20%;  width: 7px;  height: 7px;  animation-duration: 15s; animation-delay: 3s; }
+            .particle:nth-child(24) { left: 42%; top: 80%;  width: 6px;  height: 6px;  animation-duration: 16s; animation-delay: 1s; }
+            .particle:nth-child(25) { left: 52%; top: 10%;  width: 8px;  height: 8px;  animation-duration: 14s; animation-delay: 2s; }
+            .particle:nth-child(26) { left: 62%; top: 75%;  width: 5px;  height: 5px;  animation-duration: 13s; animation-delay: 4s; }
+            .particle:nth-child(27) { left: 72%; top: 5%;   width: 6px;  height: 6px;  animation-duration: 12s; animation-delay: 0s; }
+            .particle:nth-child(28) { left: 82%; top: 90%;  width: 7px;  height: 7px;  animation-duration: 15s; animation-delay: 3s; }
+            .particle:nth-child(29) { left: 92%; top: 30%;  width: 6px;  height: 6px;  animation-duration: 16s; animation-delay: 1s; }
+            .particle:nth-child(30) { left: 98%; top: 95%;  width: 8px;  height: 8px;  animation-duration: 14s; animation-delay: 2s; }           
+            @keyframes fall {
+                0% { transform: translateY(0) translateX(0); }
+                50% { transform: translateY(50vh) translateX(20px); }
+                100% { transform: translateY(100vh) translateX(-100); }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <h1>About us</h1>
+        <h3><u>Our goal</u></h3>
+        <p>Our mission is to empower students with real-time information about 
+            safe zones and clear guidance 
+            on how to respond effectively during emergencies.</p>
+    
+    
+        <h3><u>Our Team</u></h3>
+        <p>We are a team of four dedicated individuals collaborating to build, manage, 
+            and enhance this platform.
+        </p>
+        <h3><u>Our members</u></h3>
+        
+        <!--team members+infinite scrol  -->
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="card">4 members</div>
+                <div class="card">integrate safety system</div>
+                <div class="card">serious coders</div>
+                <div class="card">11th Grade</div>
+                <div class="card">4 members</div>
+                <div class="card">integrate safety system</div>
+                <div class="card">serious coders</div>
+                <div class="card">11th Grade</div>
+                <div class="card">4 members</div>
+                <div class="card">integrate safety system</div>
+                <div class="card">serious coders</div>
+                <div class="card">11th Grade</div>
+                <div class="card">4 members</div>
+                <div class="card">integrate safety system</div>
+                <div class="card">serious coders</div>
+                <div class="card">11th Grade</div>
+                
+                
+            </div>
+        </div>
+
+        <div class="team-container">
+            <div>
+                <p>Member 1: Sai Gunapalli</p>
+                <ul>
+                    <li>Role: Front End Developer</li>
+                    <li>Responsibilities:</li>
+                </ul>
+            </div>
+            <div>
+                <p>Member 2: Sid Yerram</p>
+                <ul>
+                    <li>Role: Front End Developer</li>
+                    <li>Responsibilities:</li>
+                </ul>
+            </div>
+            <div>
+                <p>Member 3: Aniketh Narra</p>
+                <ul>
+                    <li>Role: Back End Developer</li>
+                    <li>Responsibilities:</li>
+                </ul>
+            </div>
+            <div>
+                <p>Member 4: Shirish Bollineni</p>
+                <ul>
+                    <li>Role: Back End Developer</li>
+                    <li>Responsibilities:</li>
+                </ul>
+            </div>
+        </div>
+    </body>
 
