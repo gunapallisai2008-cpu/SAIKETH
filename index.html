@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About us page</title>
-        
-        <!--animations/styles  -->
-        
         <style>
            .carousel-container{
                 width:100%;
                 overflow:hidden;
                 background: linear-gradient(135deg, #3B0050, #6A0DAD);
                 padding:10px;
-                margin-top: 50px;       
+                margin-top: 50px;
+            
+                        
                 }
+            
             .carousel-item{
                 transition:scale(2);
                 box-shadow:0 0 5px rgba(255, 140, 0, 1);
@@ -89,10 +89,15 @@
                     text-align: center;
                 }
             .team-container {
-                display: flex;        
-                gap: 30px;            
-                flex-wrap: wrap;      
+                display: grid;        
+                gap: 20px;            
+                grid-template-columns: repeat(4,1fr);
+                grid-auto-rows:(auto);    
                 margin-top: 20px;
+                justify-items: center;  
+                justify-content: end; 
+                
+                
                 
              }
             .team-container div{
@@ -100,8 +105,7 @@
                 border: 2px solid #ffffff;
                 border-radius: 10px;
                 padding: 15px;
-                width: 300px;
-                margin: 40px;
+                width: 250px;
                 display: inline-block;
                 vertical-align: top;
                 display:grid;
@@ -131,7 +135,6 @@
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
             }
-            /* particle code */
             .particle:nth-child(1)  { left: 5%;  top: 10%;  width: 6px;  height: 6px;  animation-duration: 12s;  animation-delay: 0s; }
             .particle:nth-child(2)  { left: 15%; top: 40%;  width: 8px;  height: 8px;  animation-duration: 15s; animation-delay: 2s; }
             .particle:nth-child(3)  { left: 25%; top: 20%;  width: 5px;  height: 5px;  animation-duration: 14s; animation-delay: 4s; }
@@ -206,7 +209,7 @@
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
-        <!-- main parts of code -->
+        
         <h1>About us</h1>
         <h3><u>Our goal</u></h3>
         <p>Our mission is to empower students with real-time information about 
@@ -220,7 +223,7 @@
         </p>
         <h3><u>Our members</u></h3>
         
-        <!--team members+infinite scroll  -->
+        <!--team members+infinite scrol  -->
         
         <div class="carousel-container">
             <div class="carousel-track">
