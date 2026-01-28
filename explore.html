@@ -1,4 +1,45 @@
-.contentredirectory{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome Page</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 20px;
+            color: aliceblue;
+            background: linear-gradient(
+                -45deg,
+                #2e2b2b,
+                #3a3434,
+                #1f1c1c,
+                #4c4a4a
+            );
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        h1{
+                
+                text-align: center;
+                /* add color later */
+                font-size: clamp(36px, 6vw, 500px);
+                margin-bottom:  20px;
+                text-shadow: 0 0 20px rgba(255,255,255,0.5),
+                 0 0 30px rgba(255,255,255,0.4),
+                 0 0 40px rgba(255,255,255,0.3);
+
+                animation: glowPulse 3s ease-in-out infinite alternate;
+            }
+        h2{
+                text-align: center;
+                font-size: clamp(18px, 3vw, 150px);
+                margin-bottom: 40px;
+                margin-top:80px;
+            }
+        .contentredirectory{
                 display: flex;
                 flex-direction:row;
                 justify-content: flex-start;
@@ -12,7 +53,7 @@
                 border-radius: 20px;
                 
             }
-            .SafeSphereLogo{
+        .SafeSphereLogo{
                 text-decoration: none;
                 color:inherit;
                 margin:0;
@@ -20,20 +61,22 @@
                 font-size: 25px;
                 
             }
-            .aboutuslink{
+        .aboutuslink{
                 text-decoration: none;
                 color:inherit;
                 margin-left:200px;
                 padding:0 10px;
                 font-size: 25px;
+        }
+            
 
-                
-            }
             
 
     </style>
     <body>
         <div class="contentredirectory"> 
             <a href="welcome.html" class="SafeSphereLogo">SafeSphere</a>
-            <a href="about.html" class="aboutuslink">About Us</a>
+            <a href="index.html" class="aboutuslink">About Us</a>
         </div>
+ </head>
+ </html>
