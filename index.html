@@ -60,61 +60,59 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        .explorebutton {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            margin-left: 150px;
-            margin-top: 100px;
-            padding: 10px 20px;
-            color: white;
-            border: 2px solid white;
-            cursor: pointer;
+        @media (max-width: 500px) {
+                .explorebutton {
+                    margin-left: 20px; 
+                    width: calc(100% - 40px);
+            }
         }
 
-        .rightarrow {
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 6px;
-            transform: rotate(-45deg);
-        }
-
-        .orb {
-            position: fixed;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-            border-radius: 50%;
-            animation: drift 30s linear infinite;
-            pointer-events: none;
-        }
-
-        .orb:nth-child(1) { top: 20%; left: 10%; animation-duration: 35s; }
-        .orb:nth-child(2) { top: 60%; left: 70%; animation-duration: 45s; }
-        .orb:nth-child(3) { top: 40%; left: 40%; animation-duration: 55s; }
-        
-        @keyframes drift {
-            from { transform: translateY(0) translateX(0); }
-            to   { transform: translateY(-200px) translateX(150px); }
-        }
+            .explorebutton{
+                align-items: center;
+                font-size: 20px;
+                display: inline-flex;
+                margin-top: 100px;
+                padding: 10px 20px;
+                color: white;
+                border:2px solid white;
+                transition: all 0.3s ease;
+                margin-left: 200px;
+                height: 50px;
+            }
+            .rightarrow{
+                border: solid currentColor;
+                width: 10px;
+                height: 10px;
+                border-width: 0 3px 3px 0;
+                transform: rotate(-45deg);
+                transition: all 0.3s ease;
+            }
+            .explorelink{
+                text-decoration: none;
+                color:inherit;
+                align-self: flex-start;
+                margin-left: 20px;
+            }
+            .explorebutton:hover{
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+            
 
     </style>
-</head>
+    <body>
+    
+        <h1>Safe Sphere</h1>
+        <h2>“Your Safety, Our Responsibility.”</h2>
+        <a href="index.html" class="explorelink">
+            <div class="explorebutton">
+                Explore
+                <i class="rightarrow"></i>
+            </div>
+        </a>
+        
+        
 
-<body>
-    <div class="orb"></div>
-    <div class="orb"></div>
-    <div class="orb"></div>
-
-    <h1>NAME</h1>
-    <h2>Tag line</h2>
-
-    <div class="explorebutton">
-        Explore
-        <i class="rightarrow"></i>
-    </div>
-</body>
+    </body>
 </html>
