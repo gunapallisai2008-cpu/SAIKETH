@@ -101,6 +101,26 @@
             to   { transform: translateY(-200px) translateX(150px); }
         }
 
+        shape {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%; /* make circle, use 0% for square */
+            animation: float 25s linear infinite;
+            pointer-events: none;
+        }
+        
+        .shape:nth-child(1) { top: 10%; left: 20%; width: 40px; height: 40px; animation-duration: 30s; }
+        .shape:nth-child(2) { top: 70%; left: 80%; width: 60px; height: 60px; animation-duration: 45s; }
+        .shape:nth-child(3) { top: 50%; left: 50%; width: 50px; height: 50px; animation-duration: 35s; }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-100px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+
     </style>
 </head>
 
