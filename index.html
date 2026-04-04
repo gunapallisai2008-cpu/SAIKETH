@@ -107,7 +107,7 @@
             .contentredirectory{
                 display: flex;
                 flex-direction:row;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: center;
                 font-size: 20px;
                 padding: 10px 20px;
@@ -116,6 +116,8 @@
                 transition: all 0.3s ease;
                 height: 50px;
                 border-radius: 20px; 
+                width:100%;
+                box-sizing:border-box;
             }
             .SafeSphereLogo{
                 text-decoration: none;
@@ -128,16 +130,23 @@
             .aboutuslink{
                 text-decoration: none;
                 color:inherit;
-                margin-left:200px;
+                margin-left:20px;
                 padding:0 10px;
                 font-size: 25px;
             }
-            .aboutuslink:hover, .SafeSphereLogo:hover{
+            .aboutuslink:hover, .SafeSphereLogo:hover, .loginlink:hover{
                 transform: translateY(-5px) scale(1.05);
                 box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
                 border-radius: 25px;
                 background-color:aliceblue;
                 color: black;
+            }
+            .loginlink{
+                text-decoration: none;
+                color:inherit;
+                margin-left:20px;
+                padding:0 10px;
+                font-size: 25px;
             }
 
             
@@ -147,6 +156,7 @@
         <div class="contentredirectory"> 
             <a href="index.html" class="SafeSphereLogo">SafeSphere</a>
             <a href="about.html" class="aboutuslink">About Us</a>
+            <a href="login.html" class="loginlink">Login</a>
         </div>
     
         <h1>Safe Sphere</h1>
